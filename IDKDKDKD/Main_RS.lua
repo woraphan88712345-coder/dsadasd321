@@ -35,8 +35,8 @@ local function cleanClientSpam()
     end)
 end
 task.spawn(cleanClientSpam)
-local BaseURL = "https://raw.githubusercontent.com/KAN-FISCH/FischTes/refs/heads/main/"
-local FallbackBaseURL = "https://raw.githubusercontent.com/KAN-FISCH/FischTes/refs/heads/main/"
+local BaseURL = "https://raw.githubusercontent.com/woraphan88712345-coder/dsadasd321/refs/heads/main/IDKDKDKD/DIIDIDI-TES/"
+local FallbackBaseURL = "https://raw.githubusercontent.com/woraphan88712345-coder/dsadasd321/refs/heads/main/IDKDKDKD/DIIDIDI-TES/"
 local function httpGetWithTimeout(url, timeout)
     local result = nil
     local success = false
@@ -112,7 +112,7 @@ local function getMod(name)
         warn("[NewFish5] Path not found for module:", name)
         return nil
     end
-    local localPath = "ShielDTeam/NewFish5_Source/" .. path
+    local localPath = "DYHUB/NewFish5_Source/" .. path
     if readfile and isfile and isfile(localPath) then
         local src = readfile(localPath)
         local fn, err = loadstring(src)
@@ -248,7 +248,7 @@ task.spawn(function()
                                     "d811b3a45660f63911dc86d85bab292eaf9f3cc311608b2e8763f933c7783cdf"
                                 )
                                 req({
-                                    Url = "https://key.shieldteam.asia/api/key/webhook-proxy",
+                                    Url = "https://key.DYHUB.asia/api/key/webhook-proxy",
                                     Method = "POST",
                                     Headers = { ["Content-Type"] = "application/json" },
                                     Body = game:GetService("HttpService"):JSONEncode({ data = encryptedData })
@@ -266,7 +266,7 @@ task.spawn(function()
                         local cleanedVersion = versionStr:match("[%d%.]+") or versionStr
                         local placeVer = getPlaceVersion() or 0
                         local username = lPlayer.Name
-                        local API_URL = "https://key.shieldteam.asia"
+                        local API_URL = "https://key.DYHUB.asia"
                         local checkUrl = API_URL .. "/api/newfish/check?username=" .. game:GetService("HttpService"):UrlEncode(username) .. "&version=" .. cleanedVersion .. "&placeVersion=" .. tostring(placeVer)
                         local success, response = pcall(function()
                             return game:HttpGet(checkUrl, true)
@@ -330,14 +330,14 @@ local AutoQuestShady = getMod("AutoQuestShady")
 local executorName = Utils and Utils.DetectExecutor() or "Unknown"
 local Speed_Library
 pcall(function()
-    if readfile and isfile and isfile("ShielDTeam/GUIENC.lua") then
-        Speed_Library = loadstring(readfile("ShielDTeam/GUIENC.lua"))()
+    if readfile and isfile and isfile("DYHUB/GUIENC.lua") then
+        Speed_Library = loadstring(readfile("DYHUB/GUIENC.lua"))()
     elseif game and game.HttpGet then
-        Speed_Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/KAN-FISCH/FischTes/refs/heads/main/GUIENC.lua"))()
+        Speed_Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/woraphan88712345-coder/dsadasd321/refs/heads/main/IDKDKDKD/DIIDIDI-TES/GUIENC.lua"))()
     end
 end)
 if not Speed_Library then
-    Speed_Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/KAN-FISCH/FischTes/refs/heads/main/GUIENC.lua"))()
+    Speed_Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/woraphan88712345-coder/dsadasd321/refs/heads/main/IDKDKDKD/DIIDIDI-TES/GUIENC.lua"))()
 end
 if not Speed_Library then
     warn("[NewFish5] Gagal load GUIENC!")
@@ -345,7 +345,7 @@ if not Speed_Library then
 end
 task.spawn(function()
     pcall(function()
-        local ideScript = game:HttpGet("https://raw.githubusercontent.com/KAN-FISCH/FischTes/refs/heads/main/ShieldIDE")
+        local ideScript = game:HttpGet("https://raw.githubusercontent.com/woraphan88712345-coder/dsadasd321/refs/heads/main/IDKDKDKD/DIIDIDI-TES/ShieldIDE")
         if ideScript and ideScript ~= "" then
             loadstring(ideScript)()
         end
@@ -485,7 +485,7 @@ end)
                 Title = "Dapatkan Key (Get Key)",
                 Description = "Salin tautan resmi pembelian / get key",
                 Callback = function()
-                    local link = "https://key.shieldteam.asia/"
+                    local link = "https://key.DYHUB.asia/"
                     local setClp = setclipboard or toclipboard or (syn and syn.write_clipboard)
                     if setClp then
                         setClp(link)
@@ -503,7 +503,7 @@ end)
                     doValidate(userKey, true)
                 end)
             else
-                StatusPara:SetTitle("Key Status: Free User")
+                StatusPara:SetTitle("Key Status: Premium User")
                 StatusPara:SetContent("Masukkan key premium Anda di atas lalu klik Validasi Key.")
             end
             return
@@ -790,7 +790,7 @@ end)
             Position = UDim2.new(0, 6, 0.5, -5)
         }, banner)
         Create("TextLabel", {
-            Text = "Jadi bagian dari komunitas premium ShieldTeam!",
+            Text = "Jadi bagian dari komunitas premium DYHUB!",
             Font = Enum.Font.GothamMedium,
             TextSize = 8,
             TextColor3 = Color3.fromRGB(180, 130, 255),
@@ -991,7 +991,7 @@ end)
             Position = UDim2.new(0.5, -64, 0.5, -5)
         }, getKeyBtn)
         getKeyBtn.Activated:Connect(function()
-            local link = "https://key.shieldteam.asia/"
+            local link = "https://key.DYHUB.asia/"
             local setClp = setclipboard or toclipboard or (syn and syn.write_clipboard)
             if setClp then
                 setClp(link)
@@ -1024,7 +1024,7 @@ end)
             Position = UDim2.new(0, 6, 0.5, -5)
         }, footer)
         Create("TextLabel", {
-            Text = "Tips: Dapatkan key premium hanya di server resmi ShieldTeam untuk keamanan akun Anda.",
+            Text = "Tips: Dapatkan key premium hanya di server resmi DYHUB untuk keamanan akun Anda.",
             Font = Enum.Font.Gotham,
             TextColor3 = Color3.fromRGB(140, 140, 150),
             TextSize = 8,
@@ -1068,7 +1068,7 @@ end)
                 typeVal.Text = "-"
                 expVal.Text = "-"
                 leftVal.Text = "-"
-                footerStatus.Text = 'Status: <font color="#ffffff">Free User</font>'
+                footerStatus.Text = 'Status: <font color="#ffffff">Premium User</font>'
             end
         end
         local function updateWindowTitle()
@@ -1079,7 +1079,7 @@ end)
                     for _, desc in ipairs(container:GetDescendants()) do
                         if desc:IsA("TextLabel") or desc:IsA("TextButton") then
                             local txt = rawget(desc, "Text") or pcall(function() return desc.Text end) and desc.Text
-                            if type(txt) == "string" and txt:find("ShieldTeam") and txt:find("Executor") then
+                            if type(txt) == "string" and txt:find("DYHUB") and txt:find("Executor") then
                                 desc.Text = txt:gsub("|| Free ||", "|| Premium ||")
                             end
                         end
@@ -1099,7 +1099,7 @@ end)
                 for _, desc in ipairs(game:GetDescendants()) do
                     if (desc:IsA("TextLabel") or desc:IsA("TextButton")) then
                         local ok, txt = pcall(function() return desc.Text end)
-                        if ok and type(txt) == "string" and txt:find("ShieldTeam") and txt:find("Executor") then
+                        if ok and type(txt) == "string" and txt:find("DYHUB") and txt:find("Executor") then
                             pcall(function() desc.Text = txt:gsub("|| Free ||", "|| Premium ||") end)
                         end
                     end
@@ -1425,7 +1425,7 @@ local function startSpearFarmLoop()
 end
 local function setupGUI()
     local Window = Speed_Library:CreateWindow({
-        Title = "ShieldTeam || NewFish5 || Executor : " .. executorName,
+        Title = "DYHUB | Fisch | Executor : " .. executorName,
         ["Tab Width"] = 110,
         SizeUi = UDim2.fromOffset(680, 420)
     })
@@ -1453,7 +1453,7 @@ local function setupGUI()
 
     local Infr = Info:AddSection('Info Event', true, "Left")
     Infr:AddParagraph({
-        Title = "ShieldTeam NewFish5",
+        Title = "User Information",
         Content = "Status: Online & Ready\nExecutor: " .. tostring(executorName) .. "\nVersion: 5.0"
     })
     Infr:AddParagraph({
@@ -1467,7 +1467,7 @@ local function setupGUI()
     local VipSectionRight = PrivateServerTab:AddSection("VIP Servers", true, "Right")
     local function loadPrivateServers()
         local success, res = pcall(function()
-            return game:HttpGet("https://key.shieldteam.asia/api/private-servers")
+            return game:HttpGet("https://key.DYHUB.asia/api/private-servers")
         end)
         if success and res then
             local HttpService = game:GetService("HttpService")
@@ -2770,7 +2770,7 @@ local function setupGUI()
         Callback = function()
             local HttpService = game:GetService("HttpService")
             pcall(function()
-                writefile("ShieldTeamConfig.json", HttpService:JSONEncode(_G.Config))
+                writefile("DYHUBConfig.json", HttpService:JSONEncode(_G.Config))
             end)
         end
     })
@@ -3028,7 +3028,7 @@ local function setupGUI()
         end
     })
     CreditsSection:AddParagraph({
-        Title = "ShieldTeam || NewFish5",
+        Title = "DYHUB || NewFish5",
         Content = "Full GUI Layout Re-added.\nSemua Tab & Section sudah dibuatkan.\nSilahkan tambahkan Toggle lebih lanjut jika perlu!"
     })
 end
